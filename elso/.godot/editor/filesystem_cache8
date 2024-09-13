@@ -1,0 +1,19 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1726225359
+Blue.png::CompressedTexture2D::309567325360807484::1726222980::1726223976::1::::<><>::
+Cherries.png::CompressedTexture2D::9182267982193836655::1726222980::1726223976::1::::<><>::
+End (Idle).png::CompressedTexture2D::2361411019780503191::1726225359::1726225359::1::::<><>::
+game_manager.gd::GDScript::-1::1726222980::0::1::::<>Node<>::
+icon.svg::CompressedTexture2D::8346058936512193487::1726222980::1726223976::1::::<><>::
+Idle (32x32).png::CompressedTexture2D::2124939363045058726::1726222980::1726223976::1::::<><>::
+Jump (32x32).png::CompressedTexture2D::4025574188374136557::1726222980::1726223976::1::::<><>::
+main.tscn::PackedScene::6961758248357824238::1726224883::0::1::::<><>::uid://en7r8c5nj8gu::::res://Blue.png<>uid://q1ig4uo0dp5e::::res://scenes/main_character.tscn<>uid://bh8wg4eumwhx5::::res://Terrain (16x16).png<>uid://u4b8byi4uvhf::::res://scenes/collectable.tscn<>res://game_manager.gd
+Run (32x32).png::CompressedTexture2D::4306852485457663119::1726222980::1726223976::1::::<><>::
+Terrain (16x16).png::CompressedTexture2D::2947215073929581880::1726222980::1726223976::1::::<><>::
+::res://godot_platformer/::1726222980
+README.md::TextFile::-1::1726222980::0::1::::<><>::
+::res://scenes/::1726222980
+collectable.gd::GDScript::-1::1726222980::0::1::::<>Area2D<>::
+collectable.tscn::PackedScene::1463763565821713079::1726222980::0::1::::<><>::uid://d327u2u11t31t::::res://Cherries.png<>res://scenes/collectable.gd
+main_character.gd::GDScript::-1::1726222980::0::1::::<>CharacterBody2D<>::
+main_character.tscn::PackedScene::1177193325262516516::1726222980::0::1::::<><>::res://scenes/main_character.gd<>uid://bxmavbi55qc7f::::res://Jump (32x32).png<>uid://5jlo8vifvkcc::::res://Idle (32x32).png<>uid://b2mjh4i7fnth4::::res://Run (32x32).png
