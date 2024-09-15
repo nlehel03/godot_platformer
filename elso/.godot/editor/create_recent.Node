@@ -1,7 +1,14 @@
+Button
 Label
+VBoxContainer
+TextureRect
 Panel
-CanvasLayer
 Node
 CollisionShape2D
-Sprite2D
 Area2D
+AnimatedSprite2D
+Sprite2D
+RigidBody2D
+HBoxContainer
+CanvasLayer
+Camera2D
