@@ -1,11 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726403981
+::res://::1726423158
 ::res://assets/::1726403767
-::res://assets/background/::1726403767
+::res://assets/background/::1726434718
 Blue.png::CompressedTexture2D::309567325360807484::1725997909::1726324315::1::::<><>::
+Double Jump (32x32).png::CompressedTexture2D::6230468382500944257::1726434718::1726434718::1::::<><>::
 Gray.png::CompressedTexture2D::2054791237495067605::1726315366::1726324315::1::::<><>::
 Green.png::CompressedTexture2D::7263967668170017406::1726316434::1726324315::1::::<><>::
-::res://assets/character/::1726403767
+j1.png::CompressedTexture2D::6956962856588970932::1726433666::1726433667::1::::<><>::
+j2.png::CompressedTexture2D::5273044789947837076::1726433666::1726433667::1::::<><>::
+j3.png::CompressedTexture2D::7678669186311740148::1726433666::1726433667::1::::<><>::
+j4.png::CompressedTexture2D::7089550423604879706::1726433666::1726433667::1::::<><>::
+::res://assets/character/::1726434731
+Double Jump (32x32).png::CompressedTexture2D::5325252198647150897::1726434731::1726434731::1::::<><>::
 Idle (32x32).png::CompressedTexture2D::2124939363045058726::1726001074::1726324349::1::::<><>::
 Jump (32x32).png::CompressedTexture2D::4025574188374136557::1725999474::1726324349::1::::<><>::
 Run (32x32).png::CompressedTexture2D::4306852485457663119::1726001237::1726324349::1::::<><>::
@@ -19,21 +25,21 @@ Frog of Justice logo.png::CompressedTexture2D::626553378017847291::1726316067::1
 ::res://assets/terrain/::1726403767
 Terrain (16x16).png::CompressedTexture2D::2947215073929581880::1725998124::1726324373::1::::<><>::
 ::res://scenes/::1726403767
-::res://scenes/gameobjects/::1726403791
+::res://scenes/gameobjects/::1726434642
 collectable.gd::GDScript::-1::1726314970::0::1::::<>Area2D<>::
 collectable.tscn::PackedScene::1463763565821713079::1726324405::0::1::::<><>::uid://d327u2u11t31t::::res://assets/gameelements/Cherries.png<>res://scenes/gameobjects/collectable.gd
 enemy.gd::GDScript::-1::1726393746::0::1::::<>RigidBody2D<>::
-enemy.tscn::PackedScene::8385014006547572026::1726403791::0::1::::<><>::res://scenes/gameobjects/enemy.gd<>uid://u1tnms8k7ote::::res://assets/gameelements/Idle (36x30).png
+enemy.tscn::PackedScene::8385014006547572026::1726434642::0::1::::<><>::res://scenes/gameobjects/enemy.gd<>uid://u1tnms8k7ote::::res://assets/gameelements/Idle (36x30).png
 fall.gd::GDScript::-1::1726324156::0::1::::<>Area2D<>::
-main_character.gd::GDScript::-1::1726393861::0::1::::<>CharacterBody2D<>::
+main_character.gd::GDScript::-1::1726423498::0::1::::<>CharacterBody2D<>::
 main_character.tscn::PackedScene::1177193325262516516::1726324349::0::1::::<><>::res://scenes/gameobjects/main_character.gd<>uid://bxmavbi55qc7f::::res://assets/character/Jump (32x32).png<>uid://5jlo8vifvkcc::::res://assets/character/Idle (32x32).png<>uid://b2mjh4i7fnth4::::res://assets/character/Run (32x32).png
 trophy.gd::GDScript::-1::1726318021::0::1::::<>Area2D<>::
-trophy.tscn::PackedScene::1398063034448925582::1726403791::0::1::::<><>::uid://6qbraiq3s7ty::::res://assets/gameelements/End (Idle).png<>res://scenes/gameobjects/trophy.gd
-::res://scenes/levels/::1726403791
+trophy.tscn::PackedScene::1398063034448925582::1726434642::0::1::::<><>::uid://6qbraiq3s7ty::::res://assets/gameelements/End (Idle).png<>res://scenes/gameobjects/trophy.gd
+::res://scenes/levels/::1726434642
 game_manager.gd::GDScript::-1::1726393746::0::1::::<>Node<>::
-lvl1.tscn::PackedScene::6961758248357824238::1726403791::0::1::::<><>::res://scenes/levels/game_manager.gd<>uid://en7r8c5nj8gu::::res://assets/background/Blue.png<>uid://bh8wg4eumwhx5::::res://assets/terrain/Terrain (16x16).png<>uid://q1ig4uo0dp5e::::res://scenes/gameobjects/main_character.tscn<>uid://t6h5nmssvubu::::res://scenes/gameobjects/trophy.tscn<>uid://u4b8byi4uvhf::::res://scenes/gameobjects/collectable.tscn<>uid://ba52ulygffear::::res://scenes/levels/lvl2.tscn<>uid://drp07qx1a7r8u::::res://scenes/gameobjects/enemy.tscn<>uid://bdc6oh2x0e1uu::::res://assets/gameelements/sziv.png<>res://scenes/gameobjects/fall.gd<>res://scenes/levels/pause.gd<>uid://i6riio76bdlb::::res://assets/menu/Frog of Justice logo.png
-lvl2.tscn::PackedScene::2450027706109339737::1726403791::0::1::::<><>::res://scenes/levels/game_manager.gd<>uid://4jmd14ldlnld::::res://assets/background/Gray.png<>uid://bh8wg4eumwhx5::::res://assets/terrain/Terrain (16x16).png<>uid://q1ig4uo0dp5e::::res://scenes/gameobjects/main_character.tscn<>uid://t6h5nmssvubu::::res://scenes/gameobjects/trophy.tscn<>uid://bwhbq6jfvxujr::::res://scenes/menu/main menu.tscn
+lvl1.tscn::PackedScene::6961758248357824238::1726434642::0::1::::<><>::res://scenes/levels/game_manager.gd<>uid://en7r8c5nj8gu::::res://assets/background/Blue.png<>uid://c8ah4h148xe0q::::res://assets/background/j4.png<>uid://bh8wg4eumwhx5::::res://assets/terrain/Terrain (16x16).png<>uid://dhnuta6y8k2om::::res://assets/background/j3.png<>uid://chekjosthi7d5::::res://assets/background/j2.png<>uid://q1ig4uo0dp5e::::res://scenes/gameobjects/main_character.tscn<>uid://c6eafrcj624cu::::res://assets/background/j1.png<>uid://t6h5nmssvubu::::res://scenes/gameobjects/trophy.tscn<>uid://u4b8byi4uvhf::::res://scenes/gameobjects/collectable.tscn<>uid://ba52ulygffear::::res://scenes/levels/lvl2.tscn<>uid://drp07qx1a7r8u::::res://scenes/gameobjects/enemy.tscn<>uid://bdc6oh2x0e1uu::::res://assets/gameelements/sziv.png<>res://scenes/gameobjects/fall.gd<>res://scenes/levels/pause.gd<>uid://i6riio76bdlb::::res://assets/menu/Frog of Justice logo.png
+lvl2.tscn::PackedScene::2450027706109339737::1726434642::0::1::::<><>::res://scenes/levels/game_manager.gd<>uid://4jmd14ldlnld::::res://assets/background/Gray.png<>uid://bh8wg4eumwhx5::::res://assets/terrain/Terrain (16x16).png<>uid://q1ig4uo0dp5e::::res://scenes/gameobjects/main_character.tscn<>uid://t6h5nmssvubu::::res://scenes/gameobjects/trophy.tscn<>uid://bwhbq6jfvxujr::::res://scenes/menu/main menu.tscn
 pause.gd::GDScript::-1::1726391111::0::1::::<>Node<>::
-::res://scenes/menu/::1726403791
-main menu.tscn::PackedScene::3945116820086738555::1726403791::0::1::::<><>::res://scenes/menu/main_menu.gd<>uid://dbqyqschxd8xe::::res://assets/background/Green.png<>uid://i6riio76bdlb::::res://assets/menu/Frog of Justice logo.png
+::res://scenes/menu/::1726434642
+main menu.tscn::PackedScene::3945116820086738555::1726434642::0::1::::<><>::res://scenes/menu/main_menu.gd<>uid://dbqyqschxd8xe::::res://assets/background/Green.png<>uid://i6riio76bdlb::::res://assets/menu/Frog of Justice logo.png
 main_menu.gd::GDScript::-1::1726324260::0::1::::<>Node2D<>::
