@@ -3,7 +3,3 @@ res://scenes/levels/lvl2.tscn
 res://scenes/menu/main menu.tscn
 res://scenes/gameobjects/trophy.tscn
 res://scenes/gameobjects/enemy.tscn
-res://scenes/levels/game_manager.gd
-res://scenes/levels/pause.gd
-res://scenes/gameobjects/enemy.gd
-res://scenes/gameobjects/main_character.gd
