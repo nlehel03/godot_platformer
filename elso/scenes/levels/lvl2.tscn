@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ba52ulygffear"]
+[gd_scene load_steps=13 format=3 uid="uid://ba52ulygffear"]
 
 [ext_resource type="Script" path="res://scenes/levels/game_manager.gd" id="1_he86o"]
 [ext_resource type="Texture2D" uid="uid://4jmd14ldlnld" path="res://assets/background/Gray.png" id="2_hoeol"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://q1ig4uo0dp5e" path="res://scenes/gameobjects/main_character.tscn" id="4_sbepj"]
 [ext_resource type="PackedScene" uid="uid://t6h5nmssvubu" path="res://scenes/gameobjects/trophy.tscn" id="5_pib48"]
 [ext_resource type="PackedScene" uid="uid://bwhbq6jfvxujr" path="res://scenes/menu/main menu.tscn" id="6_k262d"]
+[ext_resource type="PackedScene" uid="uid://dfhkyacr5m5wp" path="res://scenes/menu/GUI.tscn" id="7_h47kh"]
+[ext_resource type="PackedScene" uid="uid://drp07qx1a7r8u" path="res://scenes/gameobjects/enemy.tscn" id="7_r8njm"]
+[ext_resource type="PackedScene" uid="uid://u4b8byi4uvhf" path="res://scenes/gameobjects/collectable.tscn" id="8_nu0wy"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gcoru"]
 
@@ -283,23 +286,10 @@ target_level = ExtResource("6_k262d")
 
 [node name="Collectables" type="Node" parent="SceneObjects"]
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="Enemy" parent="SceneObjects" instance=ExtResource("7_r8njm")]
+position = Vector2(233, 448)
 
-[node name="Panel" type="Panel" parent="UI"]
-texture_filter = 1
-offset_left = 51.0
-offset_top = 54.0
-offset_right = 238.0
-offset_bottom = 129.0
+[node name="collectable2" parent="SceneObjects" instance=ExtResource("8_nu0wy")]
+position = Vector2(122, 557)
 
-[node name="PointsLabel" type="Label" parent="UI/Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "Points: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Gui" parent="." instance=ExtResource("7_h47kh")]

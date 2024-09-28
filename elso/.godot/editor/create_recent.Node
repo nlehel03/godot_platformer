@@ -1,4 +1,5 @@
 Sprite2D
+Parallax2D
 ParallaxLayer
 ParallaxBackground
 Button
@@ -11,4 +12,3 @@ CollisionShape2D
 Area2D
 AnimatedSprite2D
 RigidBody2D
-HBoxContainer

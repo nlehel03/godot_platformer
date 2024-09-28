@@ -1,0 +1,5 @@
+res://scenes/menu/main menu.tscn
+res://scenes/levels/lvl1.tscn
+res://scenes/levels/lvl2.tscn
+res://scenes/menu/GUI.tscn
+res://scenes/gameobjects/enemy.tscn

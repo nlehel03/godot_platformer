@@ -7,10 +7,38 @@
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_jtxio")
 
+[node name="Parallax2D" type="Parallax2D" parent="."]
+visible = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(30, 37)
+motion_mirroring = Vector2(2048, 2048)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-19.9995, -48.9998)
+scale = Vector2(4.58398, 3.15339)
+texture = ExtResource("2_u3str")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 1024)
+
 [node name="Background" type="TextureRect" parent="."]
 texture_filter = 1
-offset_right = 1152.0
-offset_bottom = 647.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1055.0
+offset_top = -151.0
+offset_right = 3107.0
+offset_bottom = 1825.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 texture = ExtResource("2_u3str")
 stretch_mode = 1
 
