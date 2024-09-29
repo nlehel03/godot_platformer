@@ -1,3 +1,5 @@
+CharacterBody2D
+Node
 Sprite2D
 Parallax2D
 ParallaxLayer
@@ -7,7 +9,6 @@ Label
 VBoxContainer
 TextureRect
 Panel
-Node
 CollisionShape2D
 Area2D
 AnimatedSprite2D

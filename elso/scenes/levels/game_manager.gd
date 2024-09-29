@@ -1,25 +1,30 @@
 extends Node
-@onready var gui_scene =preload("res://scenes/menu/GUI.tscn")
+@export var hearts: Array[Node]
 var gui_instance: Node =null
-var points_label: Label = null
+#var points_label: Label = null
+
+@onready var points_label: Label = $"../SceneObjects/UI/Panel/PointsLabel"
+
+
 
 func _ready() ->void:
-	gui_instance=gui_scene.instantiate()
-	get_tree().root.add_child(gui_instance)
-	gui_instance.name="GUI"
-	points_label = gui_instance.get_node("UI/Panel/PointsLabel")
-	print("gui példányosítva:",get_tree().root.get_child_count())
+	"""var current_scene=get_tree().current_scene
+	points_label=current_scene.find_node("PointsLabel",true,false)
+	if points_label:
+		print("PointsLabel megtalálva")
+	else:
+		print("PointsLabel nem található")
+	"""
 
 
-@export var hearts: Array[Node]
 
 
 var points=0
 var lives=3
 
 func decrease_health():
-	lives-=1
-	for i in range(3):
+	lives -= 1
+	for i in 3:
 		if(i<lives):
 			hearts[i].show()
 		else:
@@ -32,6 +37,6 @@ func add_point():
 	print(points)
 	if points_label:
 		points_label.text="Points: "+str(points)
-	else:
-		points_label.text="points_label nem található"
+	"""else:
+		points_label.text="points_label nem található"""
 	

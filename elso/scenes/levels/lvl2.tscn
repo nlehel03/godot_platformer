@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ba52ulygffear"]
+[gd_scene load_steps=15 format=3 uid="uid://ba52ulygffear"]
 
 [ext_resource type="Script" path="res://scenes/levels/game_manager.gd" id="1_he86o"]
 [ext_resource type="Texture2D" uid="uid://4jmd14ldlnld" path="res://assets/background/Gray.png" id="2_hoeol"]
@@ -6,9 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://q1ig4uo0dp5e" path="res://scenes/gameobjects/main_character.tscn" id="4_sbepj"]
 [ext_resource type="PackedScene" uid="uid://t6h5nmssvubu" path="res://scenes/gameobjects/trophy.tscn" id="5_pib48"]
 [ext_resource type="PackedScene" uid="uid://bwhbq6jfvxujr" path="res://scenes/menu/main menu.tscn" id="6_k262d"]
-[ext_resource type="PackedScene" uid="uid://dfhkyacr5m5wp" path="res://scenes/menu/GUI.tscn" id="7_h47kh"]
 [ext_resource type="PackedScene" uid="uid://drp07qx1a7r8u" path="res://scenes/gameobjects/enemy.tscn" id="7_r8njm"]
 [ext_resource type="PackedScene" uid="uid://u4b8byi4uvhf" path="res://scenes/gameobjects/collectable.tscn" id="8_nu0wy"]
+[ext_resource type="Texture2D" uid="uid://bdc6oh2x0e1uu" path="res://assets/gameelements/sziv.png" id="9_v2xd7"]
+[ext_resource type="Script" path="res://scenes/levels/pause.gd" id="10_ea4lt"]
+[ext_resource type="Texture2D" uid="uid://i6riio76bdlb" path="res://assets/menu/Frog of Justice logo.png" id="11_dxpw5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gcoru"]
 
@@ -248,11 +250,143 @@ sources/0 = SubResource("TileSetAtlasSource_58mp1")
 
 [node name="Node" type="Node"]
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 unique_name_in_owner = true
 script = ExtResource("1_he86o")
+hearts = [NodePath("../SceneObjects/UI/Hearts/HBoxContainer/Heart1"), NodePath("../SceneObjects/UI/Hearts/HBoxContainer/Heart2"), NodePath("../SceneObjects/UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="SceneObjects" type="Node" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="SceneObjects"]
+
+[node name="Panel" type="Panel" parent="SceneObjects/UI"]
+texture_filter = 1
+offset_left = 51.0
+offset_top = 54.0
+offset_right = 238.0
+offset_bottom = 129.0
+
+[node name="PointsLabel" type="Label" parent="SceneObjects/UI/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Points: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hearts" type="Panel" parent="SceneObjects/UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -246.0
+offset_top = 38.0
+offset_right = -61.0
+offset_bottom = 111.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SceneObjects/UI/Hearts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -26.0
+offset_right = 82.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart1" type="TextureRect" parent="SceneObjects/UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_v2xd7")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="SceneObjects/UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_v2xd7")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="SceneObjects/UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("9_v2xd7")
+expand_mode = 2
+
+[node name="Pause" type="Node" parent="SceneObjects/UI"]
+script = ExtResource("10_ea4lt")
+
+[node name="PausePanel" type="Panel" parent="SceneObjects/UI/Pause"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="SceneObjects/UI/Pause/PausePanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_top = 52.0
+offset_right = 518.0
+offset_bottom = 155.0
+grow_horizontal = 2
+texture = ExtResource("11_dxpw5")
+
+[node name="Label" type="Label" parent="SceneObjects/UI/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -109.0
+offset_right = 89.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Paused"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SceneObjects/UI/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -324.0
+offset_right = 120.0
+offset_bottom = -67.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 39
+
+[node name="Resume" type="Button" parent="SceneObjects/UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Resume"
+
+[node name="BackToMenu" type="Button" parent="SceneObjects/UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Back to menu"
 
 [node name="TextureRect" type="TextureRect" parent="SceneObjects"]
 texture_filter = 1
@@ -292,4 +426,5 @@ position = Vector2(233, 448)
 [node name="collectable2" parent="SceneObjects" instance=ExtResource("8_nu0wy")]
 position = Vector2(122, 557)
 
-[node name="Gui" parent="." instance=ExtResource("7_h47kh")]
+[connection signal="pressed" from="SceneObjects/UI/Pause/PausePanel/VBoxContainer/Resume" to="SceneObjects/UI/Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="SceneObjects/UI/Pause/PausePanel/VBoxContainer/BackToMenu" to="SceneObjects/UI/Pause" method="_on_back_to_menu_pressed"]

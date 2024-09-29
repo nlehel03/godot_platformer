@@ -18,14 +18,7 @@ func jump_side(x):
 
 
 func _physics_process(delta: float) -> void:
-	
-	
-	
-		
-		
-		
-		
-	# Add the gravity.
+		# Add the gravity.
 	if is_on_floor():
 		jump_count=0
 		#animaciok
