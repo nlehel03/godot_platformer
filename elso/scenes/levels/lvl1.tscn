@@ -451,6 +451,12 @@ position = Vector2(433, 404)
 [node name="Enemy3" parent="SceneObjects/Enemies" instance=ExtResource("8_ugxy5")]
 position = Vector2(785, 402)
 
+[node name="PatrolPoints" type="Node" parent="SceneObjects/Enemies/Enemy3"]
+
+[node name="Points1" type="Marker2D" parent="SceneObjects/Enemies/Enemy3/PatrolPoints"]
+
+[node name="Points2" type="Marker2D" parent="SceneObjects/Enemies/Enemy3/PatrolPoints"]
+
 [node name="Enemy4" parent="SceneObjects/Enemies" instance=ExtResource("8_ugxy5")]
 position = Vector2(979, 499)
 

@@ -1,6 +1,7 @@
-CharacterBody2D
+Marker2D
 Node
 Sprite2D
+CharacterBody2D
 Parallax2D
 ParallaxLayer
 ParallaxBackground
@@ -11,5 +12,3 @@ TextureRect
 Panel
 CollisionShape2D
 Area2D
-AnimatedSprite2D
-RigidBody2D

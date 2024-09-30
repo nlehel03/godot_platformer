@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var game_manager: Node = %GameManager
 var gravity=ProjectSettings.get_setting("physics/2d/default_gravity")
 const SPEED = 600.0
@@ -18,6 +19,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	move_and_slide()
+	enemyAnimations()
 
 #mozgáshoz kapcsolódók:
 func enemyGravity(delta:float):
@@ -32,7 +34,12 @@ func enemy_walk(delta:float):
 	velocity.x+=direction.x * SPEED * delta
 	currentState=State.Walk 
 	
-
+func enemyAnimations():
+	if currentState==State.Walk:
+		animated_sprite_2d.play("Walk")
+	else:
+		animated_sprite_2d.play("Idle")
+	
 
 
 #sebzés

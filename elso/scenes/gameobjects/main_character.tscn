@@ -248,9 +248,8 @@ texture_filter = 1
 position = Vector2(0, -1)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_quuod")
-animation = &"jumping"
+animation = &"double_jumping"
 autoplay = "default"
-frame_progress = 0.70291
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
